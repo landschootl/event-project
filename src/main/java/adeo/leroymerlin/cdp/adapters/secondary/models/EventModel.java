@@ -1,20 +1,21 @@
-package adeo.leroymerlin.cdp;
+package adeo.leroymerlin.cdp.adapters.secondary.models;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
-public class Event {
+@Entity(name = "Event")
+public class EventModel {
+
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String title;
 
     private String imgUrl;
 
-    @OneToMany(fetch=FetchType.EAGER)
-    private Set<Band> bands;
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<BandModel> bands;
 
     private Integer nbStars;
 
@@ -24,47 +25,53 @@ public class Event {
         return id;
     }
 
-    public void setId(Long id) {
+    public EventModel setId(Long id) {
         this.id = id;
+        return this;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public EventModel setTitle(String title) {
         this.title = title;
+        return this;
     }
 
     public String getImgUrl() {
         return imgUrl;
     }
 
-    public void setImgUrl(String imgUrl) {
+    public EventModel setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+        return this;
     }
 
-    public Set<Band> getBands() {
+    public Set<BandModel> getBands() {
         return bands;
     }
 
-    public void setBands(Set<Band> bands) {
+    public EventModel setBands(Set<BandModel> bands) {
         this.bands = bands;
+        return this;
     }
 
     public Integer getNbStars() {
         return nbStars;
     }
 
-    public void setNbStars(Integer nbStars) {
+    public EventModel setNbStars(Integer nbStars) {
         this.nbStars = nbStars;
+        return this;
     }
 
     public String getComment() {
         return comment;
     }
 
-    public void setComment(String comment) {
+    public EventModel setComment(String comment) {
         this.comment = comment;
+        return this;
     }
 }
