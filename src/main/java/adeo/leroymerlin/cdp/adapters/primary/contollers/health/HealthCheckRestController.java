@@ -1,4 +1,4 @@
-package adeo.leroymerlin.cdp.adapters.primary.contollers;
+package adeo.leroymerlin.cdp.adapters.primary.contollers.health;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

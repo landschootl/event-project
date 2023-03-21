@@ -1,8 +1,11 @@
-package adeo.leroymerlin.cdp.adapters.secondary.models;
+package adeo.leroymerlin.cdp.adapters.secondary.restapis.event.models;
 
 import javax.persistence.*;
 import java.util.Set;
 
+/**
+ * Object that represents a group of people in database
+ */
 @Entity(name = "Band")
 public class BandModel {
 

@@ -1,15 +1,13 @@
-package adeo.leroymerlin.cdp.adapters.secondary.models;
-
-import lombok.Getter;
-import lombok.Setter;
+package adeo.leroymerlin.cdp.adapters.secondary.restapis.event.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Getter
-@Setter
+/**
+ * Object that represents a member of a group in database
+ */
 @Entity(name = "member")
 public class MemberModel {
 

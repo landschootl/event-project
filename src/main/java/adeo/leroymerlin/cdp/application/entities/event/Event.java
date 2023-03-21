@@ -1,15 +1,17 @@
-package adeo.leroymerlin.cdp.application.entities;
+package adeo.leroymerlin.cdp.application.entities.event;
 
 import java.util.Set;
 
+/**
+ * Object that represents an event
+ */
 public class Event {
 
     private Long id;
     private String title;
     private String imgUrl;
     private Set<Band> bands;
-    private Integer nbStars;
-    private String comment;
+    private Comment comment = new Comment();
 
     public Long getId() {
         return id;
@@ -47,21 +49,17 @@ public class Event {
         return this;
     }
 
-    public Integer getNbStars() {
-        return nbStars;
-    }
-
-    public Event setNbStars(Integer nbStars) {
-        this.nbStars = nbStars;
-        return this;
-    }
-
-    public String getComment() {
+    public Comment getComment() {
         return comment;
     }
 
-    public Event setComment(String comment) {
+    public Event setComment(Comment comment) {
         this.comment = comment;
         return this;
+    }
+
+    public boolean isValid() {
+        return (title != null && title.length() >= 5)
+                && comment.isValid();
     }
 }

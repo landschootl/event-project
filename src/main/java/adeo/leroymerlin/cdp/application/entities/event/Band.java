@@ -1,7 +1,10 @@
-package adeo.leroymerlin.cdp.application.entities;
+package adeo.leroymerlin.cdp.application.entities.event;
 
 import java.util.Set;
 
+/**
+ * Object that represents a group of people
+ */
 public class Band {
 
     private Long id;

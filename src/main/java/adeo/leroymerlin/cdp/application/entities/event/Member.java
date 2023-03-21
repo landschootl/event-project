@@ -1,5 +1,8 @@
-package adeo.leroymerlin.cdp.application.entities;
+package adeo.leroymerlin.cdp.application.entities.event;
 
+/**
+ * Object that represents a member of a group
+ */
 public class Member {
 
     private Long id;

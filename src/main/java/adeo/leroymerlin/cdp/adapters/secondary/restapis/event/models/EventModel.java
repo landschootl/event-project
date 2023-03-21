@@ -1,21 +1,34 @@
-package adeo.leroymerlin.cdp.adapters.primary.dtos;
+package adeo.leroymerlin.cdp.adapters.secondary.restapis.event.models;
 
+import javax.persistence.*;
 import java.util.Set;
 
-public class EventDto {
+/**
+ * Object that represents an event in database
+ */
+@Entity(name = "Event")
+public class EventModel {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String title;
+
     private String imgUrl;
-    private Set<BandDto> bands;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<BandModel> bands;
+
     private Integer nbStars;
+
     private String comment;
 
     public Long getId() {
         return id;
     }
 
-    public EventDto setId(Long id) {
+    public EventModel setId(Long id) {
         this.id = id;
         return this;
     }
@@ -24,7 +37,7 @@ public class EventDto {
         return title;
     }
 
-    public EventDto setTitle(String title) {
+    public EventModel setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -33,16 +46,16 @@ public class EventDto {
         return imgUrl;
     }
 
-    public EventDto setImgUrl(String imgUrl) {
+    public EventModel setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
         return this;
     }
 
-    public Set<BandDto> getBands() {
+    public Set<BandModel> getBands() {
         return bands;
     }
 
-    public EventDto setBands(Set<BandDto> bands) {
+    public EventModel setBands(Set<BandModel> bands) {
         this.bands = bands;
         return this;
     }
@@ -51,7 +64,7 @@ public class EventDto {
         return nbStars;
     }
 
-    public EventDto setNbStars(Integer nbStars) {
+    public EventModel setNbStars(Integer nbStars) {
         this.nbStars = nbStars;
         return this;
     }
@@ -60,7 +73,7 @@ public class EventDto {
         return comment;
     }
 
-    public EventDto setComment(String comment) {
+    public EventModel setComment(String comment) {
         this.comment = comment;
         return this;
     }

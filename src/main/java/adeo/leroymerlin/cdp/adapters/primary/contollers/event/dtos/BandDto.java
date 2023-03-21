@@ -1,7 +1,10 @@
-package adeo.leroymerlin.cdp.adapters.primary.dtos;
+package adeo.leroymerlin.cdp.adapters.primary.contollers.event.dtos;
 
 import java.util.Set;
 
+/**
+ * Object that represents a group of people
+ */
 public class BandDto {
 
     private Long id;

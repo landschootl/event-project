@@ -1,5 +1,8 @@
-package adeo.leroymerlin.cdp.adapters.primary.dtos;
+package adeo.leroymerlin.cdp.adapters.primary.contollers.event.dtos;
 
+/**
+ * Object that represents a member of a group
+ */
 public class MemberDto {
 
     private Long id;

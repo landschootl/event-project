@@ -1,31 +1,24 @@
-package adeo.leroymerlin.cdp.adapters.secondary.models;
+package adeo.leroymerlin.cdp.adapters.primary.contollers.event.dtos;
 
-import javax.persistence.*;
 import java.util.Set;
 
-@Entity(name = "Event")
-public class EventModel {
+/**
+ * Object that represents an event
+ */
+public class EventDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String title;
-
     private String imgUrl;
-
-    @OneToMany(fetch = FetchType.EAGER)
-    private Set<BandModel> bands;
-
+    private Set<BandDto> bands;
     private Integer nbStars;
-
     private String comment;
 
     public Long getId() {
         return id;
     }
 
-    public EventModel setId(Long id) {
+    public EventDto setId(Long id) {
         this.id = id;
         return this;
     }
@@ -34,7 +27,7 @@ public class EventModel {
         return title;
     }
 
-    public EventModel setTitle(String title) {
+    public EventDto setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -43,16 +36,16 @@ public class EventModel {
         return imgUrl;
     }
 
-    public EventModel setImgUrl(String imgUrl) {
+    public EventDto setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
         return this;
     }
 
-    public Set<BandModel> getBands() {
+    public Set<BandDto> getBands() {
         return bands;
     }
 
-    public EventModel setBands(Set<BandModel> bands) {
+    public EventDto setBands(Set<BandDto> bands) {
         this.bands = bands;
         return this;
     }
@@ -61,7 +54,7 @@ public class EventModel {
         return nbStars;
     }
 
-    public EventModel setNbStars(Integer nbStars) {
+    public EventDto setNbStars(Integer nbStars) {
         this.nbStars = nbStars;
         return this;
     }
@@ -70,7 +63,7 @@ public class EventModel {
         return comment;
     }
 
-    public EventModel setComment(String comment) {
+    public EventDto setComment(String comment) {
         this.comment = comment;
         return this;
     }
